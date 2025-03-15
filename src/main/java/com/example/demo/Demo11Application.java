@@ -13,12 +13,16 @@ import java.util.List;
 @RestController
 public class Demo11Application {
 
+    private final StudentRepository studentRepository;
 
+    public Demo11Application(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
 
 
     @GetMapping("/welcome")
-    public String welcome() {
-        return "welcome;";
+    public List<Student> welcome() {
+        return studentRepository.findAll();
     }
 
     public static void main(String[] args) {
