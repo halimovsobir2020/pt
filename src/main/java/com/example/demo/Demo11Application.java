@@ -14,15 +14,11 @@ import java.util.List;
 public class Demo11Application {
 
 
-    private final StudentRepository studentRepository;
 
-    public Demo11Application(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
-    }
 
     @GetMapping("/welcome")
-    public List<Student> welcome() {
-        return studentRepository.findAll();
+    public String welcome() {
+        return "welcome;";
     }
 
     public static void main(String[] args) {
