@@ -9,13 +9,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Fallback;
 
-@Entity
+//@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Student {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
 
